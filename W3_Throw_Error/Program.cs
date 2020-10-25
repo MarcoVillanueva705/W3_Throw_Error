@@ -10,27 +10,34 @@ namespace W3_Throw_Error
 
     class Program
     {
-        class Verify
+        static void Main(string[] args)
         {
-            public int checkAge()
-            {
-                if ( < 18)
+            var adding = true;
+
+            while (adding)
+                {
+                Ages newAge = new Ages();
+
+                Console.WriteLine("How old are you?");
+                newAge.Age = (int.Parse(Console.ReadLine()));
+                if (int.Parse(Console.ReadLine()) < 18)
                 {
                     throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+                    adding = false;
                 }
                 else
                 {
                     Console.WriteLine("Access granted - You are old enough!");
                 }
-                //            set { phone = value; Console.WriteLine(phone); }
-
             }
         }
 
-        static void Main(string[] args)
+
+
+        class Ages
         {
-             
-            //checkAge = Console.ReadLine();
+            public int Age;
         }
     }
 }
+
