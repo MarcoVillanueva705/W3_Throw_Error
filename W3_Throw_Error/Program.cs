@@ -16,11 +16,12 @@ namespace W3_Throw_Error
 
             while (adding)
                 {
+
                 Ages newAge = new Ages();
 
                 Console.WriteLine("How old are you?");
-                newAge.Age = (int.Parse(Console.ReadLine()));
-                if (int.Parse(Console.ReadLine()) < 18)
+                newAge.Age = (Int32.Parse(Console.ReadLine()));
+                if (Int32.Parse(Console.ReadLine()) < 18)
                 {
                     throw new ArithmeticException("Access denied - You must be at least 18 years old.");
                     adding = false;
@@ -28,11 +29,11 @@ namespace W3_Throw_Error
                 else
                 {
                     Console.WriteLine("Access granted - You are old enough!");
+                    adding = false;
+
                 }
             }
         }
-
-
 
         class Ages
         {
