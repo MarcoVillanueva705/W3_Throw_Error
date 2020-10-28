@@ -12,24 +12,28 @@ namespace W3_Throw_Error
     {
         static void Main(string[] args)
         {
-            var adding = true;
+            //var adding = true;
 
-            while (adding)
-                {
+            while (true)
+            {
 
                 Ages newAge = new Ages();
 
                 Console.WriteLine("How old are you?");
-                newAge.Age = (Int32.Parse(Console.ReadLine()));
-                if (Int32.Parse(Console.ReadLine()) < 18)
+                newAge.Age = (int.Parse(Console.ReadLine()));
+
+                if (newAge.Age < 18)
                 {
                     throw new ArithmeticException("Access denied - You must be at least 18 years old.");
-                    adding = false;
+                    //adding = false;
+                    break;
                 }
+
                 else
                 {
                     Console.WriteLine("Access granted - You are old enough!");
-                    adding = false;
+                    //adding = false
+                    break;
 
                 }
             }
